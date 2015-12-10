@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+
+  get 'articles/show'
+
+  get 'articles/new'
+
+  get 'welcome/index'
+  #root 'welcome/index'
+
+  resources :articles
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
