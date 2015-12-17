@@ -54,4 +54,14 @@ class RecipeTest < ActiveSupport::TestCase
     @recipe.description = "a" * 19
     assert_not @recipe.valid?
   end
+
+  test "email should be present" do
+    @chef.email = " "
+    assert_not @chef.valid?
+  end
+
+  test "email length should be within bounds" do
+    @chef.email = "a" * 101 + "@example.com"
+    assert_not @chef.valid?
+  end
 end 
