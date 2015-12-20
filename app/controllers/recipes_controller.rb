@@ -14,15 +14,18 @@ class RecipesController < ApplicationController
 
   def create
      @recipe = Recipe.new(recipe_params)
-     if @recipe.save
-       redirect_to recipes_path
-     else
-       render :new
-     end
+     #@recipe.chef = Chef.find(:chef_id)
+      if @recipe.save
+        flash[:success] = "Your recipe was created successfully"
+        redirect_to recipes_path
+      else
+        render :new
+      end
   end
 
   private
-  def recipe_params
-    params.require(:recipe).permit(:chefid, :name, :description, :summary)
-  end
+  
+    def recipe_params
+      params.require(:recipe).permit(:name, :summary, :description)
+    end
 end
