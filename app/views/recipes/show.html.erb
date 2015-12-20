@@ -1,0 +1,11 @@
+<p>
+  <h1><%= @recipe.name %></h1>
+</p>
+<div class="row">
+  <div class="col-med-4 pull-right center">
+    <%= gravatar_for @recipe.chef, size: 200 %>
+    <p>
+      <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
+    </p>
+  </div>
+</div>
