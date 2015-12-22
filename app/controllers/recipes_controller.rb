@@ -48,7 +48,7 @@ end
 
 def like
   @recipe = Recipe.find(params[:id])
-  like = like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
+  like = Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
   if like.valid?
     flash[:success] = "Your selection was successful"
     redirect_to :back
