@@ -16,9 +16,12 @@ Rails.application.routes.draw do
   end
 
   resources :chefs 
-    resources :recipes
   
-  
+  resources :recipes do
+    member do
+      post 'like'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
