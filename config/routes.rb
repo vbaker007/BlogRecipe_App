@@ -15,7 +15,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :chefs 
+  resources :chefs, except: [:new]
+
+  get '/register', to: 'chefs#new'
   
   resources :recipes do
     member do

@@ -4,7 +4,7 @@ Prior to authentication system, already present in the app:
 - Chef model and validations
 - Chefs table with columns chefname and email
 
-What needs to be accomplished through building chef authentication system:
+Features of chef authentication system:
 - Add passwords to the chefs table so chefs can be authenticated and logged in
 - Use email as log in credentials, since email is unique
 - Ability to register new chefs to use the app
