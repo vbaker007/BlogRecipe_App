@@ -11,7 +11,7 @@ What needs to be accomplished through building chef authentication system:
 - Ability to display chefs profile
 - Ability to list chefs using the app
 - Ability for chefs to log in and log out of the app
-- Restric actions like create recipe, edit recipe and like feature to loggied in chefs only
+- Restrict actions like create recipe, edit recipe and like feature to loggied in chefs only
 - Restricting edit of recipes by chefs who created the recipes
 
 
