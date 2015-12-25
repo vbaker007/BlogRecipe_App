@@ -26,7 +26,9 @@
       </ul>
     <% else %>
       <div class="nav_item">
-        
+        <%= link_to "Log in", login_path, class: "btn btn-default btn-success" %>
+      </div>
+    <% end %>
        <div class="nav_item">
         <%= link_to "Logout", logout_path, class: "btn btn-default btn-danger" %>
       </div>
