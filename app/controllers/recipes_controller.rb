@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController 
+  before_action :set_recipe, only: [:edit, :update, :show, :like]
   
   def index
     @recipes = Recipe.paginate(page: params[:page], per_page: 4)
@@ -38,7 +39,6 @@ class RecipesController < ApplicationController
         render :edit
       end
   end
-
 
 def destroy
   @recipe = Recipe.find(params[:id])
