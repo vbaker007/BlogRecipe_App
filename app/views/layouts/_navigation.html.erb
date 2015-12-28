@@ -10,6 +10,13 @@
             <% Style.all.each do |style| %>
               <li><%= link_to style.name, style_path(style) %></li>
             <% end %>
+            <% if logged_in? %>
+              <li class="divider"></li>
+              <li>
+                <%= link_to(new_style_path) do %>
+                  New Style
+                <% end %>
+              </li>
           </ul>
       </li>
     </ul>
