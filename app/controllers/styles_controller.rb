@@ -1,5 +1,9 @@
 class StylesController < ApplicationController
 
+  def show
+    @style = Style.find(params[:id])
+  end
+
   def new
     @style = Style.new
   end
