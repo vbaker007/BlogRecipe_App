@@ -22,6 +22,10 @@ class Recipe < ActiveRecord::Base
     self.likes.where(like: false).size
   end
 
+  def reviews_by_chef(chef_id)
+    reviews.where(chef_id: chef_id)
+  end
+  
   private
 
     def picture_size
