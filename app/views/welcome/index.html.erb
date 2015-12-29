@@ -1,33 +1,26 @@
-<div class="center jumbotron">
-  <h1>Welcome to MyRecipes App</h1>
-  <h2>
-    The is a recipe forum for where chefs can Post, Share, & Vote on other Recipes!
-  </h2>
-  <%= link_to "Sign up now!", register_path, class: "btn btn-lg btn-success" %>
+
+<div class="center jumbotron img-responsive">
+  <div class="jumbo-text">
+    <h1>Welcome to MyRecipes App</h1>
+    <h2 style="color: white">
+    </h2>
+    <%= link_to "Sign up now", register_path, class: "btn btn-lg btn-success" %>
+  </div>
 </div>
+
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-lg-6">
     <h3 class="midrow">
       View Recipes as Guest User
     </h3>
-    <h2 class="left">Browse and view recipes as a guest and Sign up later</h2>
-    <p><%= link_to "Browse Recipe Listings", recipes_path, class: "btn btn-warning btn-small" %></p>
+    <p class="left">Browse and view recipes, styles, ingredients and chefs as a guest user.</p>
+    <p><%= link_to "Browse Recipe Listings", recipes_path, class: "btn btn-danger btn-small" %></p>
   </div>
-  <div class="col-lg-4">
+  <div class="col-lg-6">
     <h3 class="midrow">
-      Sign in to your account
+      Sign In
     </h3>
-    <h2 class="left">Add/update your recipes/create reviews/like or dislike recipes & much more!</h2>
-    <p><%= link_to "Log in to your account", login_path, class: "btn btn-warning btn-small" %></p>
-  </div>
-  <div class="col-lg-4">
-    <h3 class="midrow">
-      View Recipes as Guest User
-    </h3>
-    <h2 class="left">Browse and view recipes as a guest and Sign up later</h2>
-    <p><%= link_to "Browse Recipe Listings", "", class: "btn btn-warning btn-small" %></p>
+    <p class="left">Add recipes, create reviews, like/dislike recipes and more!</p>
+    <p><%= link_to "Login", login_path, class: "btn btn-danger btn-small" %></p>
   </div>
 </div>
-
-
-<%= link_to 'My Blog', controller: 'articles' %>

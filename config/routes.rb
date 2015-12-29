@@ -15,30 +15,25 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :chefs, except: [:new, :destroy]
-
-  get '/register', to: 'chefs#new'
-
-  get '/login', to: "logins#new"
-  post '/login', to: "logins#create"
-  get '/logout', to: "logins#destroy"
- 
-  resources :styles, only: [:new, :create, :show]
-  resources :ingredients, only: [:new, :create, :show]
-  
   resources :recipes do
     member do
       post 'like'
     end
-    resources :reviews, shallow: true
+      resources :reviews, only: [:new, :create, :show]
   end
-
-  resources :chefs, except: [:new, :destroy] do
-    resources :reviews, only: [:index, :show]
-  end
-
-  resources :reviews, only: [:new, :create, :show]
-
+  
+  resources :chefs, except: [:new, :destroy]
+  
+  get '/register', to: 'chefs#new'
+  
+  get '/login', to: "logins#new"
+  post '/login', to: "logins#create"
+  get '/logout', to: "logins#destroy"
+  
+  resources :styles, only: [:new, :create, :show]
+  resources :ingredients, only: [:new, :create, :show]
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

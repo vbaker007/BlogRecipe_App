@@ -1,29 +1,52 @@
+$navbar-default-bg: #0A000F;
+$dark-purple: #0A000F;
+$navbar-default-color: $dark-purple;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#logo { 
-          margin-top: 10px;
-          margin-bottom: 10px;
-          float: left;
-          margin-right: 10px;
-          font-size: 2em;
-          color: #fff;
-          text-transform: uppercase;
-          letter-spacing: -1px;
-          padding-top: 9px;
-          font-weight: bold;
-
-
-          }
+#logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 10px;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+  
 #logo:hover {
-              color: white;
-              text-decoration: none;
+  color: #ADADAD;
+  text-decoration: none;
 
 }
 
 body {
-        padding-top: 80px;
-         
+  padding-top: 80px;
+
+}
+
+.navbutton {
+  background-color: $dark-purple;
+  color: #fff;
+}
+
+.navbutton:hover {
+  background-color: $dark-purple;
+  color: #ADADAD;
+}
+
+.loginbut {
+  background-color: $dark-purple !important;
+  color: #fff;
+}
+
+.loginbut:hover {
+  background-color: $dark-purple !important;
+  color: #ADADAD;
 }
 
 .nav_item {
@@ -40,22 +63,18 @@ body {
 
 .center {
   text-align: center;
-
 }
 
 h1, h2, h3, h4 {
   line-height: 1;
- 
-
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    text-align: center;
-   
-}
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+} 
 
 h2 {
   font-size: 1.2em;
@@ -63,19 +82,17 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: #777;
- 
 }
 
 .left {
   text-align: left;
   letter-spacing: .5px;
-  
 }
 
 .footer {
   margin-top: 25px;
   border-top: 1px solid #eaeaea;
-  color: #000000;
+  color: #777;
 }
 
 .chef_info {
@@ -83,12 +100,18 @@ h2 {
 }
 
 .gravatar {
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .well {
-  background-color: #EDEDED;
-  
+  background-color: #ededed;
+  padding-bottom: 30px;
+}
+
+.well-desc {
+  background-color: #ededed;
+  padding: 25px 25px 25px 25px;
+  border: 1px solid black;
 }
 
 input, textarea, select, .uneditable-input {
@@ -96,8 +119,8 @@ input, textarea, select, .uneditable-input {
   border-radius: 5px;
   width: 100%;
   margin-bottom: 15px;
-  
 }
+
 .input_checkbox input {
   width: auto !important;
 }
@@ -114,5 +137,55 @@ span.picture {
 }
 
 .show_recipe {
-  margin: 10px 10px 10px 10px;
+  margin-bottom: 15px;
+}
+
+table {
+  border-spacing: 10px;
+}
+
+.review {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+td {
+  vertical-align: top;
+  padding: 5px;
+}
+
+.shortrow {
+  width: 125px; 
+}
+
+.longrow {
+  width: 350px;
+}
+
+.chefname {
+  font-size: 3.5em;
+  text-align: left;
+}
+
+.recname {
+  font-size: 1em;
+  text-align: left;
+}
+
+.jumbotron {
+  height: 400px;
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg");
+  background-position: 50% 23%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.jumbo-text {
+  background-color: rgba(0,0,0,.65);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #DBDBDB;
 }
