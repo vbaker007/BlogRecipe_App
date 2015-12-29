@@ -1,3 +1,17 @@
+Things I need to create comments model:
+1. Migration to create reviews table, body, type = text_field, two foreign keys, reference chef_id, reference recipe_id
+2. Build Review model
+3. Build the associations, has_many and belongs_to (Between the recipes and reviews; chefs and reviews)
+4. Test out associations in Rails console
+- recipe.reviews
+- chef.reviews
+5.resources :reviews, only: [:new, :create, :show]
+6. Create routes
+7. Ensure that only authenticated chefs can create reviews, use a before_action require user
+8. You need to associate chef_id and recipe_id this in as a params hash 
+9. Use existing code if possible 
+10. Use pagination to list the reviews in Show Recipe
+
 - Add Admin Functionality to App:
 
 Authentication updates:
