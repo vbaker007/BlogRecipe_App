@@ -32,6 +32,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :chefs, except: [:new, :destroy] do
+    resources :reviews, only: [:index, :show]
+  end
+
   resources :reviews, only: [:new, :create, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
