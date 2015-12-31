@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   #get '/recipes', to: 'recipes#index'
 
   root 'welcome#index'
+  get 'welcome/AboutUs'
   resources :articles do 
     resources :comments
   end

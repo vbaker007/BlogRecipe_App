@@ -25,6 +25,7 @@ gem 'aws-sdk', '~> 1.36.1'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'byebug'
   gem 'pry'
   gem 'minitest-reporters'

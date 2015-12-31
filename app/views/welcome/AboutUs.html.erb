@@ -1,0 +1,108 @@
+<div class="container">
+  <h1 class="center-align blue-text accent-2">About Us</h1>
+  <div class="center-align">
+    <div class="row">
+      <div class="col s4 responsive-img">
+      <%= link_to(image_tag("icons/github_octocat.png", width: "60%", :alt => "Github"), "") %>
+      </div>
+      <div class="col s4 responsive-img">
+      <%= link_to(image_tag("icons/feature_qa.png", width: "50%", :alt => "Github"), "") %>
+      </div>
+      <div class="col s4 responsive-img">
+      <%= link_to(image_tag("icons/deploy_heroku.png", width: "60%", :alt => "Github"), "") %>
+      </div>
+    </div>
+    <div class="row ">
+        <div class="col s4"><%= link_to "Github", "https://github.com/vbaker007" %></div>
+        <div class="col s4"><%= link_to "Staging Environment", "" %></div>
+        <div class="col s4"><%= link_to "Production Environment", "" %></div>
+    </div>
+  </div>
+</div>
+
+<div class="light-grey section">
+  <div class="container row">
+    <h5 class="center-align">
+      How do we stand out?
+    </h5>
+    <p class="flow-text center-align">Building this app, I was able to get first-hand experience on MVC setup, polymorphic associations, development and production environment configuration, test driven development, and behavior driven development.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container row">
+    <p class="flow-text center-align">This app focuses on creating a forum where chefs can share their recipes; chefs can vote on as well as write a review to endorse others' work.  Some things that we ended up including to make our app great are: <strong>Single Table Inheritance, Nested Attributes, Nested Routes, Polymorphic Associations, Google Map, 98% Rspec Coverage, and some awesome Ruby gems like: bootstrap, carrierwave, (rework this) and Puma. </strong></p>
+  </div>
+</div>
+
+<section class="wrapper blue_wallpaper">
+ <div class="row">
+    <h4 class="center-align">
+      Meet the team
+      <br>
+    
+    </h4>
+    <!-- Person left -->
+    <div class="col s12 m4 responsive-img">
+      <div>
+      
+      <h4 class="center-align"></h4>
+      </div>
+      <div class="row center-align">
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("", width: "50%", :alt => "Github"), "") %>
+        </div>
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("", width: "50%", :alt => "Linkedin"), "") %>
+        </div>
+        <p class="flow-text">
+        
+      </div>
+    </div>
+    
+    <!-- Person center -->
+      <div class="col s12 m4 responsive-img">
+      <div>
+      <%= link_to(image_tag("https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAARZAAAAJDYyYzIxYjYxLWNhYjMtNDIxOC05MzIyLWM3MjQ1ODk2OTc5NQ.jpg", width: "25%", height: "5%", :alt => "Your Face", class:"rcorners4"), "https://www.linkedin.com/profile/view?id=AAIAABut4qMB3FBhzXNRq2ekC5YfbDwGPvOyp1c&trk=nav_responsive_tab_profile_pic") %>
+      <h4 class="center-align">Vanessa Baker</h4>
+      </div>
+      <div class="row center-align">
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("icons/gitlogo.png", width: "40%", :alt => "Github"), "https://github.com/vbaker007") %>
+        </div>
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("icons/Linkedin.ico", width: "50%", :alt => "Linkedin"), "https://www.linkedin.com/pub/parker-bond/102/790/181") %>
+        </div>
+         <p class="flow-text">Elaborate on this </p>
+      </div>
+    </div>
+
+    <!-- Person right -->
+       <div class="col s12 m4 responsive-img">
+      <div>
+      <%= link_to(image_tag("", width: "90%", :alt => "Your Face", class:"rcorners6"), "") %>
+      <h4 class="center-align"></h4>
+      </div>
+      <div class="row center-align">
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("", width: "40%", :alt => "Github"), "") %>
+        </div>
+        <div class="col s6 m6 ">
+        <%= link_to(image_tag("", width: "50%", :alt => "Linkedin"), "") %>
+        </div>
+       <p class="flow-text"> </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blue_tear ">  
+  <div class='container center-align'>
+    <p class="flow-text">Dev Point Labs is an 11 week intensive Ruby on Rails Bootcamp in Salt Lake City. It covers a full web development stack (HTML, CSS, Javascript, Rails) as well as testing, version control, hosting, active record/SQL as well as JQuery, Ajax, and much more! </p>
+  </div>
+  <div class="responsive-img center-align tranparent6">
+    <%= link_to(image_tag("dpl_mountain.jpg", width: "80%", :alt => "DevPointLabs"), "http://www.devpointlabs.com/") %>
+  </div>
+</section>
+
+</div>
