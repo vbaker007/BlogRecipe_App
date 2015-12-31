@@ -7,6 +7,7 @@ RSpec.feature "Creating Recipes" do
     click_link "New Recipe"
 
     fill_in "Name", with: "Creating first recipe"
+    fill_in "Summary", with: "Lorem Ipsum"
   end
 
 end
