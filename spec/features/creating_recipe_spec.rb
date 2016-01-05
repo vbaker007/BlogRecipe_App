@@ -1,3 +1,4 @@
+require 'selenium-webdriver'
 require 'rails_helper'
 RSpec.feature "Creating Recipes" do 
   scenario "A chef creates a new recipe" do
