@@ -25,6 +25,9 @@ gem 'aws-sdk', '~> 1.36.1'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'simplecov', :require => false, :group => :test
+  gem 'capybara'
+  gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'byebug'
   gem 'pry'
@@ -41,7 +44,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', :require => false, :group => :test
+  
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'
@@ -49,12 +52,10 @@ group :test do
   gem "poltergeist"
   gem "shoulda"
   gem "test_after_commit"
-  gem "capybara"
   gem "connection_pool"
   gem "launchy"
 end
 group :development do
-
   gem "better_errors"
   gem 'web-console', '~> 2.0'
   gem 'spring'
