@@ -27,6 +27,12 @@
         0,
         0,
         null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/vbaker/rails_proj/blog/spec/rails_helper.rb": [
@@ -207,14 +213,14 @@
         null
       ],
       "/Users/vbaker/rails_proj/blog/config/initializers/carrier_wave.rb": [
+        1,
+        0,
+        0,
         null,
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
+        0,
         null,
         null
       ],
@@ -440,6 +446,6 @@
         null
       ]
     },
-    "timestamp": 1451983498
+    "timestamp": 1451991023
   }
 }

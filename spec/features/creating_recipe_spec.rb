@@ -23,4 +23,10 @@ RSpec.feature "Creating Recipes" do
     expect(page).to have_content("Name can't be blank")
     expect(page).to have_content("Summary can't be blank")
   end
+
+  describe "current_user" do
+    before :each do
+      @chef = Chef.new
+    end
+  end
 end

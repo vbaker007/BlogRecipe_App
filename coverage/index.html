@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-05T03:44:58-05:00">2016-01-05T03:44:58-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-05T05:50:24-05:00">2016-01-05T05:50:24-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.61%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.03%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.96
+         0.93
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>24</b> files in total.
-    <b>112</b> relevant lines. 
-    <span class="green"><b>97</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>119</b> relevant lines. 
+    <span class="green"><b>100</b> lines covered</span> and
+    <span class="red"><b>19</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -192,12 +192,12 @@
       
       <tr>
         <td class="strong"><a href="#d59d2993973443a88de61c7f39d6b9eb85ca1f39" class="src_link" title="config/initializers/carrier_wave.rb">config/initializers/carrier_wave.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">25.0 %</td>
         <td>10</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -272,11 +272,11 @@
       
       <tr>
         <td class="strong"><a href="#b7aa852fabef4d199c3ddd1969258ae3ddbb0b87" class="src_link" title="spec/features/creating_recipe_spec.rb">spec/features/creating_recipe_spec.rb</a></td>
-        <td class="red strong">56.25 %</td>
-        <td>26</td>
-        <td>16</td>
-        <td>9</td>
-        <td>7</td>
+        <td class="red strong">57.89 %</td>
+        <td>32</td>
+        <td>19</td>
+        <td>11</td>
+        <td>8</td>
         <td>0.6</td>
       </tr>
       
@@ -1527,75 +1527,75 @@
         <div class="source_table" id="d59d2993973443a88de61c7f39d6b9eb85ca1f39">
   <div class="header">
     <h3>config/initializers/carrier_wave.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">25.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="never" data-hits="" data-linenumber="1">
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#if Rails.env.production?</code>
+          <code class="ruby">if Rails.env.production?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="missed" data-hits="0" data-linenumber="2">
           
           
-          <code class="ruby">#  CarrierWave.configure do |config|</code>
+          <code class="ruby">  CarrierWave.configure do |config|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="missed" data-hits="0" data-linenumber="3">
           
           
-          <code class="ruby">#    config.fog_credentials = {</code>
+          <code class="ruby">    config.fog_credentials = {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">#      :provider =&gt; &#39;AWS&#39;,</code>
+          <code class="ruby">      :provider =&gt; &#39;AWS&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">#      :aws_access_key_id =&gt; ENV[&#39;S3_ACCESS_KEY&#39;]</code>
+          <code class="ruby">      :aws_access_key_id =&gt; ENV[&#39;S3_ACCESS_KEY&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">#   }</code>
+          <code class="ruby">   }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">#  config.fog_directory = ENV[&#39;S3_BUCKET&#39;]</code>
+          <code class="ruby">  config.fog_directory = ENV[&#39;S3_BUCKET&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">#  end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">#end</code>
+          <code class="ruby">end</code>
         </li>
       
     </ol>
@@ -2547,11 +2547,11 @@
         <div class="source_table" id="b7aa852fabef4d199c3ddd1969258ae3ddbb0b87">
   <div class="header">
     <h3>spec/features/creating_recipe_spec.rb</h3>
-    <h4><span class="red">56.25 %</span> covered</h4>
+    <h4><span class="red">57.89 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>19</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -2709,6 +2709,42 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;current_user&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before :each do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">      @chef = Chef.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>
