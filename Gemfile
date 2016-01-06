@@ -25,6 +25,7 @@ gem "net-ssh", require: "net/ssh"
  #Use ActiveModel has_secure_password
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
