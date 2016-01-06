@@ -38,6 +38,9 @@ body {
   background-color: $dark-purple;
   color: #ADADAD;
 }
+a:hover {
+  font-weight: bold;
+}
 
 .loginbut {
   background-color: $dark-purple !important;
