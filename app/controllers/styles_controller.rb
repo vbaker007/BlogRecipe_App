@@ -16,7 +16,7 @@ class StylesController < ApplicationController
       flash[:success] = "Style was created successfully"
       redirect_to recipes_path
     else
-      render 'new'
+      render :new
     end
   end
   
