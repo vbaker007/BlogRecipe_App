@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def create
     @chef = Chef.find_or_create_from_auth_hash(auto_hash)
-    self.current_user = @chef
+    session[:chef_id] = @chef.id
     redirect_to root_path
   end
 
