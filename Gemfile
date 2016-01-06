@@ -26,6 +26,7 @@ gem "net-ssh", require: "net/ssh"
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'omniauth-twitter'
+gem 'twitter'
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
