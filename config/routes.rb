@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/AboutUs'
+  get '/auth/:provider/callback', to: 'sessions#create'
   resources :articles do 
     resources :comments
   end
