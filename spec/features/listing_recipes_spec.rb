@@ -23,7 +23,7 @@ Arrange the mint leaves around the top of the strawberry and stick a long mint s
 Microwave the white chocolate in 15-second intervals, stirring, until melted. Transfer to a resealable plastic bag. Snip the corner and pipe a zigzag pattern onto the semisweet chocolate. Let set 15 minutes.")
   end
 
-  scenario "List all recipes" do
+  scenario "All Recipes" do
     visit "/"
 
     expect(page).to have_content(@recipe1.name)
