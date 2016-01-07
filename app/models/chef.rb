@@ -10,22 +10,11 @@ class Chef < ActiveRecord::Base
                                     format: { with: VALID_EMAIL_REGEX }
   has_secure_password 
 
-  def self.find_or_create_from_auth_hash(auth_hash)
-    chef = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create
-    chef.update(
-      chefname: auth_hash.info.chefname,
-      token: auth_hash.credentials.token,
-      secret: auth_hash.credentials.secret
-    )
-    chef
-  end
-
-  def twitter
-    @client ||= Twitter::REST::Client.new do |config|
-      config.consumer_key        = Rails.application.secrets.twitter_api_key
-      config.consumer_secret     = Rails.application.secrets.twitter_api_secret
-      config.access_token        = token
-      config.access_token_secret = secret
+  def self.create_with_omniauth(auth)
+    create! do |chef|
+      chef.provider = auth["provider"]
+      chef.uid = auth["uid"]
+      chef.chefname = auth["info"]["name"]
     end
   end
 end

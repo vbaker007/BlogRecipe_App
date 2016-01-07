@@ -1,4 +1,5 @@
-<%= render 'shared/page_title', title: @recipe.name %>
+
+<%= render 'shared/page_title', title: @recipe.name %> 
 
 <div class="row">
   <div class="col-md-4 pull-right center">
@@ -14,6 +15,8 @@
     <% if logged_in? and current_user.admin? %>
     <%= link_to "[Delete Recipe]", @recipe, method: :delete, data: {confirm: "Are you sure you want to delete this Recipe?"} %>
     <% end %>
+    
+
     <h3><%= @recipe.summary %></h3>
     <div class="show_recipe">
       <%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
@@ -26,6 +29,7 @@
       <p>Ingredients: <%= render @recipe.ingredients %></p>
       <% end %>
       <p>
+
         <strong>Steps:</strong>
       </p>
       <%= simple_format(@recipe.description) %>
@@ -40,6 +44,10 @@
     </div>
   </div>
 </div>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?"
+  data-size="large">Tweet your thoughts</a>
+
     <p>
       <h5><b><%= @recipe.reviews.count %> Reviews on Chef <%= @recipe.chef.chefname %>'s <%= @recipe.name %></b></h5>
     </p>
@@ -88,6 +96,28 @@
     </div>
   </div>
 <% end %>    
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">Share your thoughts</a>
 
 <h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
+<link rel="canonical"
+  href="https://young-castle-7437.herokuapp.com/">
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+
 

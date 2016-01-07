@@ -13,11 +13,7 @@ class Recipe < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   validate :picture_size
   default_scope -> { order(updated_at: :desc) }
-  before_create :post_to_twitter
 
-  def post_to_twitter
-    chef.twitter.update(description)
-  end
 
   def thumbs_up_total
     self.likes.where(like: true).size

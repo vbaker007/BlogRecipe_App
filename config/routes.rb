@@ -12,7 +12,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/AboutUs'
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get 'welcome/twitter'
+  #get '/auth/:provider/callback', to: 'sessions#create'
+  get "/auth/twitter/callback" => "sessions#create"
+  #get "recipes/twitter/callback" => "sessions#create"
+  get "/signout" => "sessions#destroy", :as => :signout
   resources :articles do 
     resources :comments
   end

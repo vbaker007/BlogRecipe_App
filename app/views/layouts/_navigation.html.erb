@@ -1,6 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to "myRecipes", root_path, class: "btn btn-lg", id: "logo" %>
+      
     <ul class="nav_ul_item">
       <div class="dropdown">
           <%= link_to '#', class: "btn dropdown-toggle navbutton", "data-toggle" => "dropdown" do %>
@@ -19,8 +20,9 @@
                 </li>
             <% end %>
           </ul>
-      </div>
+      </div> 
     </ul>
+    
     <ul class="nav_ul_item">
       <div class="dropdown">
           <%= link_to '#', class: "btn dropdown-toggle navbutton", "data-toggle" => "dropdown" do %>
@@ -41,7 +43,7 @@
           </ul>
       </div>
     </ul>
-
+  
     <% if logged_in? %>
       <div class="nav_item">
         <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-success" %>
@@ -55,6 +57,10 @@
           <ul class="dropdown-menu">
             <li><%= link_to "View Profile", chef_path(current_user) %></li>
             <li><%= link_to "Edit Profile", edit_chef_path(current_user) %></li>
+            <li>
+             
+              <%= link_to "Sign in with Twitter", "auth/Twitter" %></li>
+          
             <li class="divider"></li>
             <li><%= link_to "Logout", logout_path %></li>
           </ul>
@@ -67,6 +73,6 @@
       <div class="nav_item navbutton pull-right">
         <%= link_to "Join", register_path, class: "btn navbutton" %>
       </div>
-    <% end %>   
+    <% end %> 
   </div>
 </header>

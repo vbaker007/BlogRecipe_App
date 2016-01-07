@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.chef = current_user
-    @recipe.chef_id = current_user.id
+   
     
     if @recipe.save
       flash[:success] = "Your recipe was created succesfully!"

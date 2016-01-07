@@ -377,6 +377,7 @@ DEPENDENCIES
   minitest-reporters
   mocha
   net-ssh
+  omniauth
   omniauth-twitter
   pg
   poltergeist
