@@ -44,10 +44,10 @@
     </div>
   </div>
 </div>
+
 <a class="twitter-share-button"
   href="https://twitter.com/intent/tweet?"
   data-size="large">Tweet your thoughts</a>
-
     <p>
       <h5><b><%= @recipe.reviews.count %> Reviews on Chef <%= @recipe.chef.chefname %>'s <%= @recipe.name %></b></h5>
     </p>
@@ -73,39 +73,28 @@
     </div>
   </div>
 <% end %>
-
-
-
 <% if logged_in? %>
 <%= render 'shared/errors', obj: @recipe %>
     <h3>Add a Review</h3>
   <div class="row">
     <div class="col-md-6 pull-left center">
       <div class="well">
-      <%= form_for([@recipe, @recipe.reviews.build]) do |f| %>
-
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit "Add your review", class: "btn btn-success" %>
-  </p>
-<% end %>
+        <%= form_for([@recipe, @recipe.reviews.build]) do |f| %>
+          <p>
+            <%= f.label :description %><br />
+            <%= f.text_area :description %>
+          </p>
+          <p>
+            <%= f.submit "Add your review", class: "btn btn-success" %>
+          </p>
+      <% end %>
       </div>
     </div>
   </div>
 <% end %>    
-<a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet">Share your thoughts</a>
+
 
 <h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
-<div id= "testmonies">
-  <% Testimony.order("tweet_id desc").limit(3).each do |testimony| %>
-    <blockquote><%= testimony.content %></blockquote>
-    <div class="from">&mdash; @<%= testimony.screen_name %></div>
-  <% end %>
-</div>
 
 
 <link rel="canonical"

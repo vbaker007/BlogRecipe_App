@@ -1,14 +1,14 @@
 <div class="footer">
   <div>
-  <p><% if current_user %>
-    Welcome <%= current_user.chefname %>
-    <%= link_to "Sign out", signout_path %>
+    <p><% if current_user %>
+      Welcome <%= current_user.chefname %>
+      <%= link_to "Sign out", signout_path %>
+    </p>
     <p>
-    <else>
-      <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-    <% end %>
-  </p>
+      <else>
+        <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+     <% end %>
+    </p>
   </div>
-  </p>
-  <p>&copy; MyRecipes 2015</p>
+    <p>&copy; MyRecipes 2015</p>
 </div>
