@@ -100,6 +100,14 @@
   href="https://twitter.com/intent/tweet">Share your thoughts</a>
 
 <h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
+<div id= "testmonies">
+  <% Testimony.order("tweet_id desc").limit(3).each do |testimony| %>
+    <blockquote><%= testimony.content %></blockquote>
+    <div class="from">&mdash; @<%= testimony.screen_name %></div>
+  <% end %>
+</div>
+
+
 <link rel="canonical"
   href="https://young-castle-7437.herokuapp.com/">
 <script>window.twttr = (function(d, s, id) {
@@ -118,6 +126,7 @@
  
   return t;
 }(document, "script", "twitter-wjs"));</script>
+
 
 
 

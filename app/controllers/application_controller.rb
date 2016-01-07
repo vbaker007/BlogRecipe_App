@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?
+  
+
+  def load_tweets
+    @tweets = Twitter.user_timeline[0..4] # For this demonstration lets keep the tweets limited to the first 5 available.
+  end
 
   def current_user
     @current_user ||= Chef.find(session[:chef_id]) if session[:chef_id]
@@ -19,4 +24,6 @@ class ApplicationController < ActionController::Base
       redirect_to recipes_path
     end
   end
+
+ 
 end

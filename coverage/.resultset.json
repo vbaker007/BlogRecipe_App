@@ -220,7 +220,9 @@
         null,
         null,
         null,
+        null,
         0,
+        null,
         null,
         null
       ],
@@ -259,10 +261,35 @@
         null,
         null
       ],
+      "/Users/vbaker/rails_proj/blog/config/initializers/omniauth.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/vbaker/rails_proj/blog/config/initializers/session_store.rb": [
         null,
         null,
         1
+      ],
+      "/Users/vbaker/rails_proj/blog/config/initializers/twitter.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
       ],
       "/Users/vbaker/rails_proj/blog/config/initializers/wrap_parameters.rb": [
         null,
@@ -294,6 +321,11 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         1,
@@ -397,6 +429,30 @@
         1,
         null
       ],
+      "/Users/vbaker/rails_proj/blog/spec/models/testimony_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/vbaker/rails_proj/blog/app/models/testimony.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/vbaker/rails_proj/blog/app/controllers/welcome_controller.rb": [
         1,
         1,
@@ -415,18 +471,25 @@
         null,
         1,
         null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        8,
+        null,
+        null,
         1,
         6,
         null,
         null,
         1,
-        6,
+        0,
+        0,
+        0,
         null,
         null,
-        1,
-        0,
-        0,
-        0,
         null,
         null,
         null
@@ -446,6 +509,6 @@
         null
       ]
     },
-    "timestamp": 1452038275
+    "timestamp": 1452153212
   }
 }
