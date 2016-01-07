@@ -1,5 +1,7 @@
 require 'selenium-webdriver'
 require "rails_helper"
+require 'simplecov'
+SimpleCov.start 'rails'
 
 RSpec.feature "Listing Recipes" do 
   before do
