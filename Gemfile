@@ -55,7 +55,7 @@ group :test do
   gem "mocha"
   gem "poltergeist"
   gem "shoulda"
-  gem "test_after_commit"
+  #gem "test_after_commit"
   gem "connection_pool"
   gem "launchy"
 end
