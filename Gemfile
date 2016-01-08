@@ -39,25 +39,25 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'
-  gem "mocha"
-  gem "poltergeist"
-  gem "shoulda"
+  #gem "mocha"
+  #gem "poltergeist"
+  #gem "shoulda"
   gem "test_after_commit"
   gem "capybara"
   gem "connection_pool"
-  gem "launchy"
+  #gem "launchy"
 end
 
 group :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'
-  gem "mocha"
-  gem "poltergeist"
-  gem "shoulda"
+  #gem "mocha"
+  #gem "poltergeist"
+  #gem "shoulda"
   #gem "test_after_commit"
   gem "connection_pool"
-  gem "launchy"
+  #gem "launchy"
 end
 group :development do
   gem "better_errors"
