@@ -264,14 +264,6 @@
       "/Users/vbaker/rails_proj/blog/config/initializers/omniauth.rb": [
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/vbaker/rails_proj/blog/config/initializers/session_store.rb": [
@@ -642,6 +634,6 @@
         null
       ]
     },
-    "timestamp": 1452168005
+    "timestamp": 1452309571
   }
 }
