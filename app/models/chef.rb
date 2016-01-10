@@ -8,8 +8,8 @@ class Chef < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 105 },
                                     uniqueness: { case_sensitive: false },
                                     format: { with: VALID_EMAIL_REGEX }
-  mount_uploader :gravatar, GravatarUploader
-  validate :gravatar_size
+  #mount_uploader :picture, PictureUploader
+  #validate :picture_size
   has_secure_password 
 
   def self.create_with_omniauth(auth)
@@ -17,13 +17,15 @@ class Chef < ActiveRecord::Base
       chef.provider = auth["provider"]
       chef.uid = auth["uid"]
       chef.chefname = auth["info"]["name"]
+      
+      chef.password = chef.password
     end
   end
 
-  private
-    def gravatar_size
-      if gravatar.size > 5.megabytes
-        errors.add(:gravatar, "should be less than 5MB")
-      end
-    end
+  #private
+  #  def picture_size
+  #    if picture.size > 5.megabytes
+  #      errors.add(:picture, "should be less than 5MB")
+  #    end
+  #  end
 end
