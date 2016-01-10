@@ -8,7 +8,7 @@ class Chef < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 105 },
                                     uniqueness: { case_sensitive: false },
                                     format: { with: VALID_EMAIL_REGEX }
-  mount_uploader :gravatar, PictureUploader
+  mount_uploader :gravatar, GravatarUploader
   has_secure_password 
 
   def self.create_with_omniauth(auth)
