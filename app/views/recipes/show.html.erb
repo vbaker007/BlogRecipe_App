@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-md-4 pull-right center">
     <%= link_to gravatar_for(@recipe.chef, size: 200), chef_path(@recipe.chef) %>
-
+    <%= image_tag(@recipe.chef.gravatar.url, size: "200x200", class: "gravatar", chef_path(@recipe.chef)) if chef.gravatar? %>
     <p>
       <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
     </p>
