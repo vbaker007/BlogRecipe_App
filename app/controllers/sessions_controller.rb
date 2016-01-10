@@ -7,13 +7,13 @@ class SessionsController < ApplicationController
     #chef = Chef.find_by_provider_and_uid(auth["provider"], auth["uid"]) || Chef.create_with_omniauth(auth)
     #chef = Chef.create(password)
     #session[:chef_id] = chef.id
-    flash[:success] = "Signed in!"
+    flash[:success] = "You've Signed in through Twitter!"
     redirect_to root_path
   end
 
   def destroy
     session[:chef_id] = nil
-    flash[:success] = "Signed out!"
+    flash[:success] = "You've Signed out through Twitter!"
     redirect_to root_path
   end
 
