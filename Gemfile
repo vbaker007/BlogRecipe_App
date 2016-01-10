@@ -28,6 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'twitter'
+#gem 'omniauth-google-oauth2'
+gem 'json'
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test
