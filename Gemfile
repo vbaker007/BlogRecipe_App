@@ -30,7 +30,7 @@ gem 'omniauth-twitter'
 gem 'twitter'
 #gem 'omniauth-google-oauth2'
 gem 'json'
-gem "omniauth-google-oauth2"
+#gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'simplecov', :require => false, :group => :test

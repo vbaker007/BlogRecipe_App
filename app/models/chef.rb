@@ -15,8 +15,8 @@ class Chef < ActiveRecord::Base
   def self.create_with_omniauth(auth)
     create! do |chef|
       chef.provider = auth["provider"]
-      chef.uid = auth["uid"]
-      chef.chefname = auth["info"]["name"]
+      #chef.uid = auth["uid"]
+      #chef.chefname = auth["info"]["name"]
       
       #chef.password = chef.password
     end
