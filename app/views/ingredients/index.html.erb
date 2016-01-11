@@ -19,3 +19,18 @@
 </ul>
 
 <%= will_paginate %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+    <ul>
+      <% Ingredient.all.each do |ingredient| %>
+        <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
+      <% end %>
+      <% if logged_in? %>
+        <li class="divider"></li>
+          <li>
+            <%= link_to(new_ingredient_path) do %>
+                  New Ingredient
+            <% end %>
+          </li>
+          <% end %>
+    </ul>
