@@ -1,5 +1,4 @@
-
-
+MyRecipes App is a recipe sharing forum for chefs and food lovers alike! Please enjoy and share your recipe for your favorite dish! 
 == README
 
 This README would normally document whatever steps are necessary to get the
