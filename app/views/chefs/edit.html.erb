@@ -1,3 +1,21 @@
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Recipes", recipes_path %>
+  </li>
+  <li>
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+  <li>
+    <%= link_to "Browse by Style", styles_path %>
+  </li>
+  <li>
+    <%= link_to "Browse by Ingredient", ingredients_path %>
+  </li>
+   <li>
+    <%= link_to "Edit Profile", edit_chef_path(current_user) %>
+  </li>
+</ul>
+</br>
 <%= render 'shared/page_title', title: "Edit your Profile" %>
 
 <%= render 'form' %>
