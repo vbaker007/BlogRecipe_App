@@ -10,7 +10,11 @@ Things you may want to cover:
 
 * Ruby version 2.2.2
 
-* System dependencies Uses AWS for image storage, Gravatar for user avatar
+* System dependencies:
+
+- Uses AWS for image storage, 
+
+- Gravatar for user avatar
 
 * Configuration:
 
