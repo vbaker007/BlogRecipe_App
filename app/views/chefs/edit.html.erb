@@ -11,6 +11,9 @@
   <li>
     <%= link_to "Browse by Ingredient", ingredients_path %>
   </li>
+  <li>
+    <%= link_to "View Profile", chef_path(current_user) %>
+  </li>
    <li>
     <%= link_to "Edit Profile", edit_chef_path(current_user) %>
   </li>
@@ -19,3 +22,4 @@
 <%= render 'shared/page_title', title: "Edit your Profile" %>
 
 <%= render 'form' %>
+

@@ -1,4 +1,4 @@
-<em><%= render 'shared/page_title', title: "All Ingredients Listed in MyRecipes App" %></em>
+<%= render 'shared/page_title', title: "All Ingredients Listed in MyRecipes App" %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -13,10 +13,17 @@
   <li>
     <%= link_to "Browse by Ingredient", ingredients_path %>
   </li>
-   <li>
-    <%= link_to "Edit Profile", edit_chef_path(current_user) %>
-  </li>
 </ul>
+<% if logged_in? %>
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <%= link_to "View Profile", chef_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Edit Profile", edit_chef_path(current_user) %>
+    </li>
+  </ul>
+<% end %>
 
 <%= will_paginate %>
 <div class="row">
@@ -26,14 +33,6 @@
         <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
       <% end %>
     </ol>
-      <% if logged_in? %>
-        <div class="divider"></div>
-          <p>
-            <%= link_to(new_ingredient_path) do %>
-                  New Ingredient
-            <% end %>
-          </p>
-      <% end %>
   </div>
 </div>
 <%= will_paginate %>

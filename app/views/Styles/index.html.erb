@@ -1,4 +1,4 @@
-<em><%= render 'shared/page_title', title: "All Food & Drink Styles Available in MyRecipes App" %></em>
+<%= render 'shared/page_title', title: "Food & Drink Styles Available in MyRecipes App" %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -13,10 +13,17 @@
   <li>
     <%= link_to "Browse by Ingredient", ingredients_path %>
   </li>
-   <li>
-    <%= link_to "Edit Profile", edit_chef_path(current_user) %>
-  </li>
 </ul>
+<% if logged_in? %>
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <%= link_to "View Profile", chef_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Edit Profile", edit_chef_path(current_user) %>
+    </li>
+  </ul>
+<% end %>
 
 <%= will_paginate %>
 <div class="row">
@@ -25,15 +32,7 @@
       <% Style.all.each do |style| %>
          <li><%= link_to style.name, style_path(style) %></li>
       <% end %>
-    </ol>
-      <% if logged_in? %>
-        <div class="divider"></div>
-          <p>
-           <%= link_to(new_style_path) do %>
-                      New Style
-            <% end %>
-          </p>
-      <% end %>
+    </ol> 
   </div>
 </div>
 <%= will_paginate %>

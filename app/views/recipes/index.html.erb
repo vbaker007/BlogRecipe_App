@@ -13,10 +13,18 @@
   <li>
     <%= link_to "Browse by Ingredient", ingredients_path %>
   </li>
-  <li>
-    <%= link_to "Edit Profile", edit_chef_path(current_user) %>
-  </li>
 </ul>
+  
+<% if logged_in? %>
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <%= link_to "View Profile", chef_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Edit Profile", edit_chef_path(current_user) %>
+    </li>
+  </ul>
+<% end %>
 
 <%= will_paginate %>
 
