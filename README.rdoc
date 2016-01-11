@@ -1,10 +1,9 @@
 MyRecipes App is a recipe sharing forum for chefs and food lovers alike! Please enjoy and share your favorite recipe! 
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+
+About MyRecipes App: 
 
 
 * Ruby version 2.2.2
@@ -23,5 +22,4 @@ Things you may want to cover:
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
