@@ -91,13 +91,10 @@
     </div>
   </div>
 <% end %>    
-
- <% if logged_in? and (@recipe.chef == current_user || current_user.admin?) %>
-      <%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success btn-small" %>
-  
-  <% else %>
-    <h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
-  <% end %>
+<h5>
+  <%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %>
+</h5>
+ 
   
 
 <link rel="canonical"
