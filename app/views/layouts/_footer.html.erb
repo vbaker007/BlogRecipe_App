@@ -1,14 +1,20 @@
 <div class="footer">
   <div>
-    <p><% if current_user %>
-      Welcome <%= current_user.chefname %> 
+    <p>
+      <span class="label label-default"><% if current_user %>
+        Welcome <%= current_user.chefname %> 
+      </span>
     </p>
     <p>
-      <%= link_to "Sign out", signout_path %>
+      <span class="label label-info">
+        <%= link_to "Sign out", signout_path %>
+      </span>
     </p>
     <p>
       <else>
-        <%= link_to "Sign in with Twitter", "/auth/twitter/" %>
+        <span class="label label-info">
+          <%= link_to "Sign in with Twitter", "/auth/twitter/" %>
+        </span>
      <% end %>
     </p>
   </div>
@@ -19,3 +25,5 @@
     </div>
     <p>&copy; MyRecipes 2015</p>
 </div>
+<span class="label label-info"></span>
+<span class="label label-default">Default</span>
