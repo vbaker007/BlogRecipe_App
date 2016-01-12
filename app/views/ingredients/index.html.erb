@@ -37,7 +37,7 @@
     <div class="list-group">
       <a href="#" class="list-group-item active">
 
-        <h4 class="list-group-item-heading">Ingredients Featured in MyRecipes App</h4>
+        <h4 class="list-group-item-heading">Ingredients Featured in MyRecipes</h4>
         <% Ingredient.all.each do |ingredient| %></a>
           <button type="button" class="list-group-item text-align:center"><%= link_to ingredient.name, ingredient_path(ingredient) %></button>
          <% end %>
