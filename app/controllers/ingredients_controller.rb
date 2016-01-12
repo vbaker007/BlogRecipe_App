@@ -2,7 +2,7 @@ class IngredientsController < ApplicationController
   before_action :require_user, except: [:show]
 
   def index
-    @ingredients = Ingredient.paginate(page: params[:page], per_page: 20)
+    @ingredients = Ingredient.all
   end
 
   def show

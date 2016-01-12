@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     #chef = Chef.create(password)
     #session[:chef_id] = chef.id
     flash[:success] = "You've Signed in through Twitter!"
-    redirect_to root_path
+    redirect_to :back
   end
 
   def destroy

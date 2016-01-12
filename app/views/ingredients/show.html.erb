@@ -1,14 +1,8 @@
-<%= render 'shared/page_title', title: "Recipes for : " + @ingredient.name %>
-      <style>
-          body {
-              background-color: #C0D6E4;
-          }
-      </style>
 <ul class="nav nav-tabs">
-  <li class='active'>
+  <li>
     <%= link_to "Recipes", recipes_path %>
   </li>
-  <li>
+  <li class='active'>
     <%= link_to "Chefs", chefs_path %>
   </li>
   <li>
@@ -17,10 +11,8 @@
   <li>
     <%= link_to "Browse by Ingredient", ingredients_path %>
   </li>
-</ul>
-<% if logged_in? %>
-  <ul class="nav nav-tabs">
-    <li class="active">
+  <% if logged_in? %>
+  <li class="active">
       <%= link_to "View Profile", chef_path(current_user) %>
     </li>
     <li>
@@ -32,8 +24,14 @@
     <li><span class="badge">
       <%= link_to "Sign out", signout_path %>
     </span></li>
-  </ul>
-<% end %>
+  <% end %>
+</ul>
+<%= render 'shared/page_title', title: "Recipes for : " + @ingredient.name %>
+      <style>
+          body {
+              background-color: #C0D6E4;
+          }
+      </style>
 
 <%= will_paginate @recipes %>
 

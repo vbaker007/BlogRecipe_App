@@ -5,7 +5,7 @@
  </style>
 
 <ul class="nav nav-tabs">
-  <li class="active">
+  <li>
     <%= link_to "Recipes", recipes_path %>
   </li>
   <li>
@@ -20,15 +20,13 @@
   <li>
     <%= link_to "View Profile", chef_path(current_user) %>
   </li>
-   <li>
+   <li class="active">
     <%= link_to "Edit Profile", edit_chef_path(current_user) %>
   </li>
   <li>
     <%= link_to "Sign in with Twitter", "/auth/twitter/" %>
   </li>
-  <li><span class="badge">
-      <%= link_to "Sign out", signout_path %>
-    </span></li>
+  <li><span class="badge"><%= link_to "Sign out", signout_path %></span></li>
 </ul>
 </br>
 <%= render 'shared/page_title', title: "Edit your Profile" %>

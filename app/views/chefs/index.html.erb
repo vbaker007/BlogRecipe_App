@@ -1,4 +1,3 @@
-<%= render 'shared/page_title', title: "All Chefs" %>
       <style>
               body {
                   background-color: #E1FBFF;
@@ -11,16 +10,15 @@
   <li class='active'>
     <%= link_to "Chefs", chefs_path %>
   </li>
-  <li>
-    <%= link_to "Browse by Style", styles_path %>
-  </li>
-  <li>
-    <%= link_to "Browse by Ingredient", ingredients_path %>
-  </li>
-</ul>
-<% if logged_in? %>
-  <ul class="nav nav-tabs">
-    <li class="active">
+  
+  <% if logged_in? %>
+    <li>
+      <%= link_to "Browse by Style", styles_path %>
+    </li>
+    <li>
+      <%= link_to "Browse by Ingredient", ingredients_path %>
+    </li>
+    <li>
       <%= link_to "View Profile", chef_path(current_user) %>
     </li>
     <li>
@@ -32,8 +30,9 @@
     <li><span class="badge">
       <%= link_to "Sign out", signout_path %>
     </span></li>
-  </ul>
-<% end %>
+  <% end %>
+</ul>
+<%= render 'shared/page_title', title: "All Chefs" %>
 <div class="row">
   <div class="col-md-4 col-md-offset-4 center">
     <%= will_paginate %>
