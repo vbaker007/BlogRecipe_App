@@ -5,7 +5,7 @@
   <li>
     <%= link_to "Chefs", chefs_path %>
   </li>
- 
+  
   <% if logged_in? %>
     <li class="active">
       <%= link_to "Browse by Style", styles_path %>
@@ -31,9 +31,10 @@
           }
       </style>
 
-<% end %>
-<%= render 'shared/page_title', title: "Recipes for : " + @style.name + " food or drink " %>
 
+<%= render 'shared/page_title', title: "Recipes for : " + @style.name + " food/drink " %>
+
+</br>
 <%= will_paginate @recipes %>
 
 <% @style.recipes.each do |recipe| %>
