@@ -1,5 +1,9 @@
 <%= render 'shared/page_title', title: "Recipes for : " + @style.name + " food or drink " %>
-
+      <style>
+          body {
+              background-color: #C0D6E4;
+          }
+      </style>
 <ul class="nav nav-tabs">
   <li class='active'>
     <%= link_to "Recipes", recipes_path %>
