@@ -1,7 +1,11 @@
 <%= render 'shared/page_title', title: "Create a New Ingredient" %>
 
 <%= render 'shared/errors', obj: @ingredient %>
-
+    <style>
+          body {
+              background-color: #C0D6E4;
+          }
+    </style>
 <div class="row">
   <div class="well col-md-8 col-md-offset-2">
     <%= form_for @ingredient do |f| %>
