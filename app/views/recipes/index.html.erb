@@ -1,7 +1,7 @@
 <%= render 'shared/page_title', title: "All Recipes" %>
 
-<ul class="nav nav-tabs">
-  <li class='active'>
+<ul class="nav nav-tabs" role="tablist">
+  <li role='presentation' class='active'>
     <%= link_to "Recipes", recipes_path %>
   </li>
   <li>
@@ -26,9 +26,9 @@
     <li>
       <%= link_to "Sign in with Twitter", "/auth/twitter/" %>
     </li>
-    <li>
+    <li><span class="badge">
       <%= link_to "Sign out", signout_path %>
-    </li>
+    </span></li>
   </ul>
 <% end %>
 
