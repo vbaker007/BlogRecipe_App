@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "All Ingredients Listed in MyRecipes App" %>
+<%= render 'shared/page_title', title: "Ingedients Index" %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -34,11 +34,16 @@
 <%= will_paginate %>
 <div class="row">
   <div class="col-md-4 col-md-offset-4 center">
-    <ol class="ol_item">
-      <% Ingredient.all.each do |ingredient| %>
-        <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
-      <% end %>
-    </ol>
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+
+        <h4 class="list-group-item-heading">Ingredients Featured in MyRecipes App</h4>
+        <% Ingredient.all.each do |ingredient| %></a>
+          <button type="button" class="list-group-item text-align:center"><%= link_to ingredient.name, ingredient_path(ingredient) %></button>
+         <% end %>
+      </a>
+    </div>
   </div>
 </div>
+
 <%= will_paginate %>
