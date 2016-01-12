@@ -2,17 +2,17 @@
   <li>
     <%= link_to "Recipes", recipes_path %>
   </li>
-  <li class='active'>
+  <li>
     <%= link_to "Chefs", chefs_path %>
   </li>
-  <li>
-    <%= link_to "Browse by Style", styles_path %>
-  </li>
-  <li>
-    <%= link_to "Browse by Ingredient", ingredients_path %>
-  </li>
+  
   <% if logged_in? %>
-  <li class="active">
+    <li>
+      <%= link_to "Browse by Style", styles_path %>
+    </li>
+    <li class="active">
+      <%= link_to "Browse by Ingredient", ingredients_path %>
+    </li>
       <%= link_to "View Profile", chef_path(current_user) %>
     </li>
     <li>
@@ -21,9 +21,7 @@
     <li>
       <%= link_to "Sign in with Twitter", "/auth/twitter/" %>
     </li>
-    <li><span class="badge">
-      <%= link_to "Sign out", signout_path %>
-    </span></li>
+    <li><span class="badge"><%= link_to "Sign out", signout_path %></span></li>
   <% end %>
 </ul>
 <%= render 'shared/page_title', title: "Recipes for : " + @ingredient.name %>
