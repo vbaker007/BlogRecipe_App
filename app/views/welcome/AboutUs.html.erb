@@ -11,152 +11,123 @@
     <link rel="stylesheet" href="https://abs.twimg.com/errors/fullscreen_errors-91ecc652e4fafac52ce8a1a8a181ad24.css">
   </head>
   <body>
-  <div class="containter">
-    <style media="screen" type="text/css">
+    <div class="containter">
+      <style media="screen" type="text/css">
+        @import "bootstrap-sprockets";
+        @import "bootstrap";
+          body {
+                  background: url(https://scontent-iad3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-   9/12540911_158606857843280_5813512281611403122_n.jpg?oh=8870d040c4bbcb4c026b516a6be977c1&oe=570C1C67) 0.2% 0 fixed; 
+                  height: auto;
+                  margin: 0 auto; 
+                  width: 100%; 
+                  position: relative; 
+                  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+                  padding: 70px 0;
+                  color: #fff;
+                }
+            div {
+                  border-radius: 5px;
+                }
+        #header {
+                  z-index: 1;
+                  position: fixed; 
+                  width: 97.5%;
+                  margin-top: -20px;
+                  height: 60px;
+                  background-color: #003366;
+                  margin-bottom: 10px;
+                  padding: 20px;
+                  padding-left: 30px;
+                  padding-right: 70px;
+                }
+          #name {
+                  float:left;
+                  margin-left: 5px;
+                  padding-top: 2px;
+                  padding-bottom: 55px;
+                  font-size: 16px;
+                  font-family: Verdana, sans-serif;
+                  color: #ffffff;
+                }
+          #email{
+                  float:right;
+                  margin-right: 5px;
+                  margin-bottom: 10px;
+                  padding-top: 5px;
+                  padding-bottom: 50px;
+                  font-size: 16px;
+                  font-family: Verdana, sans-serif;
+                  color: #ffffff;
+                }
+            h4 {
+                  margin-left: 5px;
+                  margin-bottom: 15px;
+                  font-family: Verdana, sans-serif;
+                }
+      .right p {
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: -10px;
+                  font-family: Garamond, serif;
+                  color: #000000;
+                }
+            li {
+                  list-style-type: square;
+                }
+        a:hover {
+                  font-weight: bold;
+                }
+          .left {
+                  position: relative;
+                  float: left;
+                  margin-top: 50px;
+                  width: 10%;
+                  height: 400px;
+                  background-color: #FFC0CB;
+                  margin-bottom: 10px;
+                }
+        .right {
+                  position: relative;
+                  float: right;
+                  margin-top: 50px;
+                  width: 88%;
+                  height: 400px;
+                  background-color: #F7F7F7;
+                  margin-bottom: 10px;
+                }
+        #footer {
+                  position: relative;
+                  height: 50px;
+                  background-color: #003366;
+                  clear: both;
+                  font-family: Verdana, sans-serif;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #ffffff;
+                }
+      #footer p {
+                  position: relative;
+                  padding-top: 15px;
+                }
+      </style>
+      <div id="header">
+        <p id="name">Vanessa Baker</p>
+        <a href="mailto:vbakerdev@gmail.com"><p id="email">vbakerdev@gmail.com</p></a>
+      </div>
+      <div class="left"></div>
+      <div class="right">
+        <h3 style="color:black; text-align:center; font-family:Times New Roman">
+          <strong>About MyRecipes App</strong>
+        </h3> 
+        <h5 style="color:black; font-family:Times New Roman"><em><blockquote>
+        Through building MyRecipes app, I was able to get hands-on-experience with setting up the development environment, the production environment, and the test environment in Rails. 
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-body {
-  background: url(https://scontent-iad3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/12540911_158606857843280_5813512281611403122_n.jpg?oh=8870d040c4bbcb4c026b516a6be977c1&oe=570C1C67) 0.2% 0 fixed; 
-    height: auto;
-      margin: 0 auto; 
-        width: 100%; 
-        position: relative; 
-        box-shadow: 0 0 50px rgba(0,0,0,0.8);
-        padding: 70px 0;
-        color: #fff;
-}
-div {
-  border-radius: 5px;
-}
-
-#header {
-  z-index: 1;
-  position: fixed; 
-  width: 97.5%;
-  margin-top: -20px;
-  height: 60px;
-  background-color: #003366;
-  margin-bottom: 10px;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 70px;
-}
-
-#name {
-  float:left;
-  margin-left: 5px;
-  padding-top: 2px;
-  padding-bottom: 55px;
-  font-size: 16px;
-  font-family: Verdana, sans-serif;
-  color: #ffffff;
-}
-
-#email{
-  float:right;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  padding-top: 5px;
-  padding-bottom: 50px;
-  font-size: 16px;
-  font-family: Verdana, sans-serif;
-  color: #ffffff;
-}
-
-h4 {
-  margin-left: 5px;
-  margin-bottom: 15px;
-  font-family: Verdana, sans-serif;
-}
-
-.right p {
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: -10px;
-  font-family: Garamond, serif;
-  color: #000000;
-}
-
-li {
-  list-style-type: square;
-}
-
-a:hover {
-  font-weight: bold;
-}
-
-.left {
-  position: relative;
-  float: left;
-  margin-top: 50px;
-  width: 10%;
-  height: 400px;
-  background-color: #FFC0CB;
-  margin-bottom: 10px;
-}
-
-.right {
-  position: relative;
-  float: right;
-  margin-top: 50px;
-  width: 88%;
-  height: 400px;
-  background-color: #F7F7F7;
-  margin-bottom: 10px;
-}
-
-#footer {
-  position: relative;
-  height: 50px;
-  background-color: #003366;
-  clear: both;
-  font-family: Verdana, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  color: #ffffff;
-}
-
-#footer p {
-  position: relative;
-  padding-top: 15px;
-}
-
-</style>
-
-  
-    <div id="header">
-      <p id="name">Vanessa Baker</p>
-      <a href="mailto:vbakerdev@gmail.com"><p id="email">vbakerdev@gmail.com</p></a>
-    </div>
-
-    <div class="left"></div>
-    <div class="right">
-
-      <h4>Objective</h4>
-      <p>test.</p>
-      <h4>App related</h4>
-      <p>text</p>
-      <ul>
-        <li>list of features</li>
-        <li>text</li>
-      </ul>
-      <h4>More description</h4>
-      <p>text</p>
-      <p>text</p>
-      <h4>about the team</h4>
-      <p>about me</p>
-      <ul>
-        <li>list of work</li>
-        <li>more tsfsadfasdfasdfsdfsdfsaext</li>
-      </ul>
-    </div>
-
-    <div id="footer">
-      <p>Github Account:<a href="https://github.com/vbaker007/BlogRecipe_App"> vbaker007</a> | Linkedin Account: <a href="https://www.linkedin.com/profile/view?id=AAIAABut4qMB3FBhzXNRq2ekC5YfbDwGPvOyp1c&trk=nav_responsive_tab_profile_pic">V.Baker</a></p>
-    </div>
-  
- </div> 
+        </em></blockquote></h5>     
+      </div>
+      <div id="footer">
+        <p>Github Account:<a href="https://github.com/vbaker007/BlogRecipe_App"> vbaker007</a> | Linkedin Account: <a href="https://www.linkedin.com/profile/view?id=AAIAABut4qMB3FBhzXNRq2ekC5YfbDwGPvOyp1c&trk=nav_responsive_tab_profile_pic">V.Baker</a></p>
+      </div>
+    </div> 
   </body>
 </html>
 
