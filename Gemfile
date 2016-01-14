@@ -27,7 +27,7 @@ gem "net-ssh", require: "net/ssh"
 gem 'bcrypt', '~> 3.1.7'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'twitter'
+#gem 'twitter'
 #gem 'omniauth-google-oauth2'
 gem 'json'
 #gem "omniauth-google-oauth2"
