@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
           flash[:success] = 'Your Review was successfully created.'
           format.html { redirect_to @recipe }
         else
-          flash.now[:danger] = "Your review must be between 10 and 500 characters long."
+          flash[:danger] = "Your review must be between 10 and 500 characters long."
           format.html {redirect_to :back}
         end
       end

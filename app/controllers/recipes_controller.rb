@@ -49,7 +49,7 @@ class RecipesController < ApplicationController
       flash[:success] = "Your selection was succesful"
       redirect_to :back
     else
-      flash.now[:danger] = "You can only like/dislike a recipe once"
+      flash[:danger] = "You can only like/dislike a recipe once"
       redirect_to :back
     end
   end
@@ -72,14 +72,14 @@ class RecipesController < ApplicationController
     
     def require_same_user
       if current_user != @recipe.chef and !current_user.admin?
-        flash.now[:danger] = "You can only edit your own recipes"
+        flash[:danger] = "You can only edit your own recipes"
         redirect_to recipes_path
       end
     end
   
   def require_user_like
     if !logged_in?
-      flash.now[:danger] = "You must be logged in to perform that action"
+      flash[:danger] = "You must be logged in to perform that action"
       redirect_to :back
     end
   end

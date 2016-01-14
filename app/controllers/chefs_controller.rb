@@ -50,7 +50,7 @@ class ChefsController < ApplicationController
     
     def require_same_user
       if current_user != @chef
-        flash.now[:danger] = "You can only edit your own profile"
+        flash[:danger] = "You can only edit your own profile"
         redirect_to root_path
       end
     end
