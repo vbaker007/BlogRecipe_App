@@ -46,15 +46,15 @@ group :development, :test do
   #gem "poltergeist"
   #gem "shoulda"
   gem "test_after_commit"
-  gem "capybara"
+  #gem "capybara"
   gem "connection_pool"
   #gem "launchy"
 end
 
 group :test do
-  gem 'minitest-reporters'
-  gem 'mini_backtrace'
-  gem 'guard-minitest'
+  #gem 'minitest-reporters'
+  #gem 'mini_backtrace'
+  #gem 'guard-minitest'
   #gem "mocha"
   #gem "poltergeist"
   #gem "shoulda"
